@@ -43,19 +43,17 @@ public class Main {
         int leftSize = mid - left + 1; // Length of A[left:mid]
         int rightSize = right - mid;  // Length of A[mid +1 :right]
 
+
         int[] leftArray = new int[leftSize];// Create new arrays
         int[] rightArray = new int[rightSize];
 
-        System.arraycopy(array, left + 0, leftArray, 0, leftSize);
-//        System.out.println("\nLeft array:");
+        for (int i = 0; i < leftSize;i++) {
+            leftArray[i] =  array[left + i];
+        }
 
-//        printArray(leftArray);
-        System.arraycopy(array, mid, rightArray, 0,rightSize);
-//        for (int j = 0; j < leftArray.length; j++) {
-//            rightArray[j] = array[mid + j + 1];
-//        }
-//        System.out.println("\nRight array:");
-//        printArray(rightArray);
+        for (int j = 0; j < rightArray.length; j++) {
+            rightArray[j] = array[mid + 1+ j];
+        }
 
         int i = 0;
         int j = 0;
